@@ -32,12 +32,11 @@ class SalesForecaster:
         processed_group = process_segment(group)
         segmented_data[(store, product_type)] = processed_group[['sales', 'special_offer', 'id', 'store_nbr']]
     
-    def __init__(self, store_number, product_type, train_end_date='2016-07-31', validation_end_date='2017-07-31'):
+    def __init__(self, store_number, train_end_date='2014-07-31', validation_end_date='2015-07-31'):
         self.store_number = store_number
-        self.product_type = product_type
         self.train_end_date = train_end_date
         self.validation_end_date = validation_end_date
-        self.model = None
+        
 
 
 
